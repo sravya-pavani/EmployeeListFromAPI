@@ -1,0 +1,57 @@
+﻿#employees {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#employees td, #employees th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#employees tr:nth-child(even){background-color: #f2f2f2;}
+
+#employees tr:hover {background-color: #ddd;}
+
+#employees th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+#Heading{
+font-family: Arial, Helvetica, sans-serif;
+color: #04AA6D;
+}
+
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+  vertical-align:middle;
+}
+
+.pagination a {
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.pagination ul > li
+{
+   display:inline-block;
+}

@@ -1,0 +1,60 @@
+﻿
+@model PagedList.IPagedList<EmployeeListFromAPI.Models.EmployeeModel>
+@using PagedList.Mvc; 
+<link href="~/Content/IndexStyling.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Greater Than";
+}
+
+  <div class="form-group">
+  
+    <img src="https://greaterthan.eu/wp-content/uploads/2019/11/cropped-greater_than_web_logo-1.png">
+        <table class="table table-bordered" id="employees">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Name
+                </th>
+                 <th>
+                    Salary
+                </th>
+                 <th>
+                    Age
+                </th>
+                 <th>
+                    Profile Image
+                </th>
+            </tr>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Salary)
+                    </td>
+                     <td>
+                        @Html.DisplayFor(modelItem => item.Age)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Profile)
+                    </td>
+                </tr>
+            }
+        </table>
+    <div>
+    <div class="center">
+        <div class="pagination">
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)  
+            of @Model.PageCount  
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))  
+        </div>
+    </div>
+    </div>
+</div>
+
