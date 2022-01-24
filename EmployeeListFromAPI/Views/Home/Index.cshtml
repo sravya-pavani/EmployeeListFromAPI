@@ -1,13 +1,12 @@
-﻿
+
 @model PagedList.IPagedList<EmployeeListFromAPI.Models.EmployeeModel>
 @using PagedList.Mvc; 
 <link href="~/Content/IndexStyling.css" rel="stylesheet" type="text/css" />
 @{
-    ViewBag.Title = "Greater Than";
+    ViewBag.Title = "Employee List From WebAPI";
 }
-
+<title>@ViewBag.Title</title>
   <div class="form-group">
-  
     <img src="https://greaterthan.eu/wp-content/uploads/2019/11/cropped-greater_than_web_logo-1.png">
         <table class="table table-bordered" id="employees">
             <tr>
@@ -57,4 +56,3 @@
     </div>
     </div>
 </div>
-
